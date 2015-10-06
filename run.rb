@@ -9,13 +9,18 @@ end
 
 get '/years' do
 
-
+	years = [1972..2013]
 
   # code!
   erb :years, layout: :main
 end
 
 get '/states' do
+
+	states = ["Nebraska","New York", "New Jersey","North Carolina","New Hampshire"]
+	states.sort
+	states.sort!
+	
   # code!
   erb :states, layout: :main
 end

@@ -1,14 +1,19 @@
 <h1>State List</h1>
 
 <p>here is a list of states...</p>
-
+<!-- I added the @ symbol so it will loop -->
 <ul>
-	<li>
-		<%= states.each do | statename |
-		puts statename
-		end %>
-	</li>
+    <!--  while looping, you want to suppress output so use <% %> and not <%= %> -->
+		<% @states.each do | statename | %> <!-- need the ending bracket here -->
+
+    <!-- puts only writes to the console -->
+    puts statename
+    <!-- this is correct syntax -->
+    <li><%= statename %></li>
+    <!-- the do opens a block. then everything inside will loop and you write your HTML out there -->
+		<% end %>
 </ul>
+
 
 
 
